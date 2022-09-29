@@ -33,18 +33,18 @@
                 <form class="mt-5" method="get">
                     <div class="form-group mt-3">
                         <label for="nombreFiltrar">Buscar por Nombre</label><br>
-                        <input class="mt-1" type="text" name="nombreFiltrar" placeholder="nombre del producto" >
+                        <input class="mt-1" type="text" name="nombreFiltrar" placeholder="nombre del producto" required>
                     </div>
                     <div class="form-group mt-3">
                         <label for="caducidadFiltrar">Fecha de caducación</label><br>
                         <span>Desde:</span>
-                        <input class="mt-1" type="date" name="desdeCaducidadFiltrar" placeholder="desde" >
+                        <input class="mt-1" type="date" name="desdeCaducidadFiltrar" placeholder="desde" required>
                         <span>Hasta:</span>
-                        <input class="mt-1" type="date" name="hastaCaducidadFiltrar" placeholder="hasta" >
+                        <input class="mt-1" type="date" name="hastaCaducidadFiltrar" placeholder="hasta" required>
                     </div> 
                     <div class="form-group mt-3">
                         <label for="paisFiltrar">País del producto</label>
-                        <select name="paisFiltrar">
+                        <select name="paisFiltrar" required>
                             <option value="Todos">Todos</option>
                             <?php 
                                 $sql = "SELECT `pais` FROM `producto`";
@@ -62,8 +62,8 @@
                     </div>
                     <div class="form-group mt-3">
                         <label for="precioFiltrar">¿Cuánto quieres pagar?</label><br>
-                        <input class="mt-1" type="number" name="desdePrecioFiltrar" placeholder="desde" >
-                        <input class="mt-1" type="number" name="hastaPrecioFiltrar" placeholder="hasta" >
+                        <input class="mt-1" type="number" name="desdePrecioFiltrar" placeholder="desde" required>
+                        <input class="mt-1" type="number" name="hastaPrecioFiltrar" placeholder="hasta" required>
                     </div>
                     <button class="btn btn-success mt-4">Filtrar</button>
                     <button id="btnCancelarFiltro"class="btn btn-warning mt-4">Cancelar</button>
