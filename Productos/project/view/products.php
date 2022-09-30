@@ -96,15 +96,14 @@
                         $sql = $sql . " AND `caducidad` > '".$_GET['desdeCaducidadFiltrar']."' AND `caducidad` < '".$_GET['hastaCaducidadFiltrar']."'";
                     }
 
-                    if($_GET['paisFiltrar'] != 'Todos'){
+                
+                    if(!empty($_GET['paisFiltrar']) && $_GET['paisFiltrar'] != 'Todos'){
                         $sql = $sql . " AND `pais`= '". $_GET['paisFiltrar']."'";
                     }
 
                     if(!empty($_GET['desdePrecioFiltrar']) && !empty($_GET['hastaPrecioFiltrar'])){
                         $sql = $sql . " AND `precio` > '".$_GET['desdePrecioFiltrar']."' AND `precio` < '".$_GET['hastaPrecioFiltrar']."'";
                     }
-
-                    print_r($sql);
 
                     $result = $conn->query($sql);
 
